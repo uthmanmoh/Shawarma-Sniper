@@ -15,6 +15,10 @@
 		001A147D2641FEB300A48069 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A147C2641FEB300A48069 /* Business.swift */; };
 		001A147F2642003800A48069 /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A147E2642003800A48069 /* BusinessSearch.swift */; };
 		001A14822642021800A48069 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A14812642021800A48069 /* Constants.swift */; };
+		001A14872642046200A48069 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A14862642046200A48069 /* HomeView.swift */; };
+		001A148A2642080300A48069 /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A14892642080300A48069 /* BusinessList.swift */; };
+		001A148C264209F400A48069 /* BusinessSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148B264209F400A48069 /* BusinessSectionHeader.swift */; };
+		001A148E26420B1600A48069 /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148D26420B1600A48069 /* BusinessSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		001A147C2641FEB300A48069 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		001A147E2642003800A48069 /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
 		001A14812642021800A48069 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		001A14862642046200A48069 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		001A14892642080300A48069 /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
+		001A148B264209F400A48069 /* BusinessSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSectionHeader.swift; sourceTree = "<group>"; };
+		001A148D26420B1600A48069 /* BusinessSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				001A1469264150FD00A48069 /* LaunchView.swift */,
+				001A14852642045400A48069 /* Home */,
+				001A14842642044F00A48069 /* Denied */,
+				001A14832642044600A48069 /* Onboarding */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,6 +122,39 @@
 				001A14812642021800A48069 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		001A14832642044600A48069 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		001A14842642044F00A48069 /* Denied */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Denied;
+			sourceTree = "<group>";
+		};
+		001A14852642045400A48069 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				001A14862642046200A48069 /* HomeView.swift */,
+				001A1488264207F400A48069 /* List */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		001A1488264207F400A48069 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				001A14892642080300A48069 /* BusinessList.swift */,
+				001A148B264209F400A48069 /* BusinessSectionHeader.swift */,
+				001A148D26420B1600A48069 /* BusinessSection.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +227,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				001A146A264150FD00A48069 /* LaunchView.swift in Sources */,
+				001A14872642046200A48069 /* HomeView.swift in Sources */,
 				001A147D2641FEB300A48069 /* Business.swift in Sources */,
+				001A148C264209F400A48069 /* BusinessSectionHeader.swift in Sources */,
 				001A1468264150FD00A48069 /* CitySightsApp.swift in Sources */,
 				001A147F2642003800A48069 /* BusinessSearch.swift in Sources */,
+				001A148A2642080300A48069 /* BusinessList.swift in Sources */,
+				001A148E26420B1600A48069 /* BusinessSection.swift in Sources */,
 				001A147B2641527100A48069 /* ContentModel.swift in Sources */,
 				001A14822642021800A48069 /* Constants.swift in Sources */,
 			);
