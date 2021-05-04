@@ -19,6 +19,7 @@
 		001A148A2642080300A48069 /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A14892642080300A48069 /* BusinessList.swift */; };
 		001A148C264209F400A48069 /* BusinessSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148B264209F400A48069 /* BusinessSectionHeader.swift */; };
 		001A148E26420B1600A48069 /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148D26420B1600A48069 /* BusinessSection.swift */; };
+		001A149026420E8600A48069 /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148F26420E8600A48069 /* BusinessRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		001A14892642080300A48069 /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
 		001A148B264209F400A48069 /* BusinessSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSectionHeader.swift; sourceTree = "<group>"; };
 		001A148D26420B1600A48069 /* BusinessSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
+		001A148F26420E8600A48069 /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				001A14892642080300A48069 /* BusinessList.swift */,
 				001A148B264209F400A48069 /* BusinessSectionHeader.swift */,
 				001A148D26420B1600A48069 /* BusinessSection.swift */,
+				001A148F26420E8600A48069 /* BusinessRow.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				001A146A264150FD00A48069 /* LaunchView.swift in Sources */,
+				001A149026420E8600A48069 /* BusinessRow.swift in Sources */,
 				001A14872642046200A48069 /* HomeView.swift in Sources */,
 				001A147D2641FEB300A48069 /* Business.swift in Sources */,
 				001A148C264209F400A48069 /* BusinessSectionHeader.swift in Sources */,

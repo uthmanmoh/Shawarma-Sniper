@@ -28,7 +28,7 @@ struct HomeView: View {
                     Divider()
                     BusinessList()
                 }
-                .padding()
+                .padding([.horizontal, .top])
             }
             
         } else {
