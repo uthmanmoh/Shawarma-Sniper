@@ -12,6 +12,9 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
     
     var locationManager = CLLocationManager()
     
+    @Published var restaurants = [Business]()
+    @Published var sights = [Business]()
+    
     override init() {
         super.init()
         
@@ -30,6 +33,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
             
             // Start geolocating the user
             locationManager.startUpdatingLocation()
+            
         } else if locationManager.authorizationStatus == .denied {
             // We don't have persmission
             
@@ -46,8 +50,8 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
             locationManager.stopUpdatingLocation()
             
             // Send location into Yelp API
-            //getBusinesses(category: "arts", location: userLocation!)
-            getBusinesses(category: "restaurants", location: userLocation!)
+            getBusinesses(category: Constants.sightsKey, location: userLocation!)
+            getBusinesses(category: Constants.restaurantsKey, location: userLocation!)
         }
         
         
@@ -59,7 +63,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
         // Create URL
         //let urlString = URL(string: "https://api.yelp.com/v3/businesses/search?latitude=\(location.coordinate.latitude)&longitude=\(location.coordinate.longitude)&categories=\(category)&limit=6")
         
-        var urlComponents = URLComponents(string: "https://api.yelp.com/v3/businesses/search")
+        var urlComponents = URLComponents(string: Constants.apiUrl)
         urlComponents?.queryItems = [
             URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
             URLQueryItem(name: "longitude", value: String(location.coordinate.longitude)),
@@ -82,7 +86,25 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
             // Create Data Task
             session.dataTask(with: request) { (data, response, error) in
                 if error == nil {
-                    print(response ?? "")
+                    
+                    // Parse json
+                    do {
+                        let result = try JSONDecoder().decode(BusinessSearch.self, from: data!)
+                        
+                        DispatchQueue.main.async {
+                            switch category {
+                            case Constants.sightsKey:
+                                self.sights = result.businesses
+                            case Constants.restaurantsKey:
+                                self.restaurants = result.businesses
+                            default:
+                                break
+                            }
+                        }
+                        
+                    } catch {
+                        print(error)
+                    }
                 }
             }.resume()
             
