@@ -25,7 +25,7 @@ struct HomeView: View {
                             Image(systemName: "location")
                             Text("San Francisco")
                             Spacer()
-                            Button("Switch to map view") {
+                            Button("Switch to Map View") {
                                 self.isMapShowing = true
                             }
                             .accentColor(.blue)
@@ -37,11 +37,29 @@ struct HomeView: View {
                     .padding([.horizontal, .top])
                     .navigationBarHidden(true)
                 } else {
-                    BusinessMap(selectedBusiness: $selectedBusiness)
-                        .ignoresSafeArea()
-                        .sheet(item: $selectedBusiness) { business in
-                            BusinessDetailView(business: business)
+                    ZStack (alignment: .top) {
+                        BusinessMap(selectedBusiness: $selectedBusiness)
+                            .ignoresSafeArea()
+                            .sheet(item: $selectedBusiness) { business in
+                                BusinessDetailView(business: business)
                         }
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(Color(.label))
+                                .colorInvert()
+                                .frame(height: 48)
+                            HStack {
+                                Image(systemName: "location")
+                                Text("Location")
+                                Spacer()
+                                Button("Switch to List View") {
+                                    self.isMapShowing = false
+                                }
+                            }
+                            .padding()
+                        }
+                        .padding()
+                    }
                 }
                 
             } else {
