@@ -149,6 +149,7 @@
 			children = (
 				001A14862642046200A48069 /* HomeView.swift */,
 				001A149426422A6A00A48069 /* Map */,
+				001A14912642171700A48069 /* Detail */,
 				001A1488264207F400A48069 /* List */,
 			);
 			path = Home;
@@ -157,7 +158,6 @@
 		001A1488264207F400A48069 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				001A14912642171700A48069 /* Detail */,
 				001A14892642080300A48069 /* BusinessList.swift */,
 				001A148B264209F400A48069 /* BusinessSectionHeader.swift */,
 				001A148D26420B1600A48069 /* BusinessSection.swift */,

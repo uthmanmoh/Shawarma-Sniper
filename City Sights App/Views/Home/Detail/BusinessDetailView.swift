@@ -25,7 +25,7 @@ struct BusinessDetailView: View {
                 }
                 .ignoresSafeArea(.all, edges: .top)
                 
-                ZStack {
+                ZStack (alignment: .leading) {
                     Rectangle()
                         .frame(height: 36)
                         .foregroundColor(business.isClosed! ? .gray : .blue)
