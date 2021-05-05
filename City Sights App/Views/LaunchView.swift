@@ -15,12 +15,12 @@ struct LaunchViews: View {
     var body: some View {
         
         if model.authorizationState == .notDetermined {
-            Text("Hello")
+            OnBoardingView()
         } else if model.authorizationState == .authorizedAlways ||
                     model.authorizationState == .authorizedWhenInUse {
             HomeView()
         } else  {
-            Text("There")
+            LocationDeniedView()
         }
         
     }
