@@ -17,7 +17,8 @@ struct BusinessSectionHeader: View {
                 .foregroundColor(Color(.label))
                 .colorInvert()
             Text(title)
-                .font(.headline)
+                .bold()
+                .font(.title)
         }
     }
 }

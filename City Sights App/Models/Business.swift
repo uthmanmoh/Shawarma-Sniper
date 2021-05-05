@@ -63,6 +63,11 @@ class Business: Decodable, Identifiable, ObservableObject {
             }.resume()
         }
     }
+    
+    static func getTestData() -> Business {
+        let b = Business()
+        return b
+    }
 }
 
 struct Category: Decodable {
