@@ -10,6 +10,7 @@ import SwiftUI
 struct BusinessDetailView: View {
     
     var business: Business
+    @State private var showDirections = false
     
     var body: some View {
         VStack (alignment: .leading) {
@@ -38,17 +39,7 @@ struct BusinessDetailView: View {
             }
             
             VStack (alignment: .leading, spacing: 15) {
-                Text(business.name ?? "")
-                    .font(.largeTitle)
-                if business.location?.displayAddress != nil {
-                    VStack (alignment: .leading, spacing: 0){
-                        ForEach(business.location!.displayAddress!, id: \.self) { address in
-                            Text(address)
-                        }
-                    }
-                }
-                
-                Image("regular_\(business.rating ?? 0)")
+                BusinessTitle(business: business)
                 
                 Divider()
                 
@@ -85,7 +76,7 @@ struct BusinessDetailView: View {
             .padding()
             
             Button(action: {
-                // Show Directions
+                showDirections = true
             }) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
@@ -97,6 +88,9 @@ struct BusinessDetailView: View {
                         .foregroundColor(.white)
                 }
             }
+            .sheet(isPresented: $showDirections, content: {
+                DirectionsView(business: business)
+            })
         }
     }
 }
