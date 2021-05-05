@@ -27,10 +27,12 @@ struct HomeView: View {
                             Button("Switch to map view") {
                                 self.isMapShowing = true
                             }
+                            .accentColor(.blue)
                         }
                         Divider()
                         BusinessList()
                     }
+                    .accentColor(Color(.label))
                     .padding([.horizontal, .top])
                     .navigationBarHidden(true)
                 } else {
@@ -42,7 +44,6 @@ struct HomeView: View {
                 ProgressView()
             }
         }
-        .accentColor(Color(.label))
     }
 }
 
