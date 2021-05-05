@@ -21,6 +21,7 @@
 		001A148E26420B1600A48069 /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148D26420B1600A48069 /* BusinessSection.swift */; };
 		001A149026420E8600A48069 /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148F26420E8600A48069 /* BusinessRow.swift */; };
 		001A14932642172F00A48069 /* BusinessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A14922642172F00A48069 /* BusinessDetailView.swift */; };
+		001A149626422A9100A48069 /* BusinessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A149526422A9100A48069 /* BusinessMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		001A148D26420B1600A48069 /* BusinessSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
 		001A148F26420E8600A48069 /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 		001A14922642172F00A48069 /* BusinessDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailView.swift; sourceTree = "<group>"; };
+		001A149526422A9100A48069 /* BusinessMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				001A14862642046200A48069 /* HomeView.swift */,
+				001A149426422A6A00A48069 /* Map */,
 				001A1488264207F400A48069 /* List */,
 			);
 			path = Home;
@@ -169,6 +172,14 @@
 				001A14922642172F00A48069 /* BusinessDetailView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		001A149426422A6A00A48069 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				001A149526422A9100A48069 /* BusinessMap.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 				001A1468264150FD00A48069 /* CitySightsApp.swift in Sources */,
 				001A147F2642003800A48069 /* BusinessSearch.swift in Sources */,
 				001A148A2642080300A48069 /* BusinessList.swift in Sources */,
+				001A149626422A9100A48069 /* BusinessMap.swift in Sources */,
 				001A148E26420B1600A48069 /* BusinessSection.swift in Sources */,
 				001A147B2641527100A48069 /* ContentModel.swift in Sources */,
 				001A14822642021800A48069 /* Constants.swift in Sources */,
