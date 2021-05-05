@@ -23,7 +23,7 @@ struct HomeView: View {
                     VStack (alignment: .leading){
                         HStack {
                             Image(systemName: "location")
-                            Text("San Francisco")
+                            Text(model.placemark?.locality ?? "")
                             Spacer()
                             Button("Switch to Map View") {
                                 self.isMapShowing = true
@@ -31,7 +31,16 @@ struct HomeView: View {
                             .accentColor(.blue)
                         }
                         Divider()
-                        BusinessList()
+                        
+                        ZStack (alignment: .top) {
+                            BusinessList()
+                            HStack {
+                                Spacer()
+                                YelpAttribution(link: "https://yelp.ca")
+                            }
+                            .padding(.trailing, -20)
+                        }
+                        
                     }
                     .accentColor(Color(.label))
                     .padding([.horizontal, .top])
@@ -50,7 +59,7 @@ struct HomeView: View {
                                 .frame(height: 48)
                             HStack {
                                 Image(systemName: "location")
-                                Text("Location")
+                                Text(model.placemark?.locality ?? "")
                                 Spacer()
                                 Button("Switch to List View") {
                                     self.isMapShowing = false

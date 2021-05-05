@@ -39,9 +39,15 @@ struct BusinessDetailView: View {
             }
             
             VStack (alignment: .leading, spacing: 15) {
-                BusinessTitle(business: business)
+                HStack {
+                    BusinessTitle(business: business)
+                    Spacer()
+                    YelpAttribution(link: business.url!)
+                }
+                .padding(.trailing, -20)
                 
-                Divider()
+                DashedDivider()
+                    .padding(.vertical)
                 
                 HStack {
                     Text("Phone: ")
@@ -51,7 +57,9 @@ struct BusinessDetailView: View {
                     Link("Call", destination: URL(string: "tel:\(business.phone ?? "")")!)
                         .accentColor(.blue)
                 }
-                Divider()
+                
+                DashedDivider()
+                    .padding(.vertical)
                 
                 HStack {
                     Text("Reviews: ")
@@ -61,7 +69,9 @@ struct BusinessDetailView: View {
                     Link("Read", destination: URL(string: "\(business.url ?? "")")!)
                         .accentColor(.blue)
                 }
-                Divider()
+                
+                DashedDivider()
+                    .padding(.vertical)
                 
                 HStack {
                     Text("Website: ")
@@ -71,7 +81,9 @@ struct BusinessDetailView: View {
                     Link("Visit", destination: URL(string: "\(business.url ?? "")")!)
                         .accentColor(.blue)
                 }
-                Divider()
+                
+                DashedDivider()
+                    .padding(.vertical)
             }
             .padding()
             

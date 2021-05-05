@@ -16,6 +16,7 @@ struct BusinessSectionHeader: View {
             Rectangle()
                 .foregroundColor(Color(.label))
                 .colorInvert()
+                .frame(height: 45)
             Text(title)
                 .bold()
                 .font(.title)
