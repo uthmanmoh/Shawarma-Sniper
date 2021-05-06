@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		000FDB9226444091003F733E /* ShawarmaSniper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000FDB9126444091003F733E /* ShawarmaSniper.swift */; };
+		000FDB94264447A2003F733E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000FDB93264447A2003F733E /* SearchBar.swift */; };
 		001A146A264150FD00A48069 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A1469264150FD00A48069 /* LaunchView.swift */; };
 		001A146C264150FF00A48069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001A146B264150FF00A48069 /* Assets.xcassets */; };
 		001A146F264150FF00A48069 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001A146E264150FF00A48069 /* Preview Assets.xcassets */; };
@@ -18,7 +19,6 @@
 		001A14872642046200A48069 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A14862642046200A48069 /* HomeView.swift */; };
 		001A148A2642080300A48069 /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A14892642080300A48069 /* BusinessList.swift */; };
 		001A148C264209F400A48069 /* BusinessSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148B264209F400A48069 /* BusinessSectionHeader.swift */; };
-		001A148E26420B1600A48069 /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148D26420B1600A48069 /* BusinessSection.swift */; };
 		001A149026420E8600A48069 /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A148F26420E8600A48069 /* BusinessRow.swift */; };
 		001A14932642172F00A48069 /* BusinessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A14922642172F00A48069 /* BusinessDetailView.swift */; };
 		001A149626422A9100A48069 /* BusinessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A149526422A9100A48069 /* BusinessMap.swift */; };
@@ -33,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		000FDB9126444091003F733E /* ShawarmaSniper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShawarmaSniper.swift; sourceTree = "<group>"; };
+		000FDB93264447A2003F733E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		001A1464264150FD00A48069 /* Shawarma Sniper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shawarma Sniper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		001A1469264150FD00A48069 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		001A146B264150FF00A48069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		001A14862642046200A48069 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		001A14892642080300A48069 /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
 		001A148B264209F400A48069 /* BusinessSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSectionHeader.swift; sourceTree = "<group>"; };
-		001A148D26420B1600A48069 /* BusinessSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
 		001A148F26420E8600A48069 /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 		001A14922642172F00A48069 /* BusinessDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailView.swift; sourceTree = "<group>"; };
 		001A149526422A9100A48069 /* BusinessMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap.swift; sourceTree = "<group>"; };
@@ -177,8 +177,8 @@
 			children = (
 				001A14892642080300A48069 /* BusinessList.swift */,
 				001A148B264209F400A48069 /* BusinessSectionHeader.swift */,
-				001A148D26420B1600A48069 /* BusinessSection.swift */,
 				001A148F26420E8600A48069 /* BusinessRow.swift */,
+				000FDB93264447A2003F733E /* SearchBar.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -288,6 +288,7 @@
 				001A14872642046200A48069 /* HomeView.swift in Sources */,
 				000FDB9226444091003F733E /* ShawarmaSniper.swift in Sources */,
 				001A14A02642529900A48069 /* LocationDeniedView.swift in Sources */,
+				000FDB94264447A2003F733E /* SearchBar.swift in Sources */,
 				001A147D2641FEB300A48069 /* Business.swift in Sources */,
 				001A148C264209F400A48069 /* BusinessSectionHeader.swift in Sources */,
 				001A14A52642591200A48069 /* DashedDivider.swift in Sources */,
@@ -297,7 +298,6 @@
 				001A148A2642080300A48069 /* BusinessList.swift in Sources */,
 				001A149626422A9100A48069 /* BusinessMap.swift in Sources */,
 				001A14A32642570F00A48069 /* YelpAttribution.swift in Sources */,
-				001A148E26420B1600A48069 /* BusinessSection.swift in Sources */,
 				001A147B2641527100A48069 /* ContentModel.swift in Sources */,
 				001A14822642021800A48069 /* Constants.swift in Sources */,
 			);

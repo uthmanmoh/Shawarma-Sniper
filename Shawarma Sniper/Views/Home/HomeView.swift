@@ -12,11 +12,12 @@ struct HomeView: View {
     @EnvironmentObject var model: ContentModel
     @State private var isMapShowing = false
     @State private var selectedBusiness: Business?
+    @State private var filter = ""
     
     var body: some View {
         
         NavigationView {
-            if model.restaurants.count != 0 || model.sights.count != 0 {
+            if model.restaurants.count != 0{
                 
                 if !isMapShowing {
                     // List View
@@ -32,8 +33,10 @@ struct HomeView: View {
                         }
                         Divider()
                         
+                        SearchBar(text: $filter)
+                        
                         ZStack (alignment: .top) {
-                            BusinessList()
+                            BusinessList(filter: $filter)
                             HStack {
                                 Spacer()
                                 YelpAttribution(link: "https://yelp.ca")
@@ -75,11 +78,5 @@ struct HomeView: View {
                 ProgressView()
             }
         }
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
     }
 }

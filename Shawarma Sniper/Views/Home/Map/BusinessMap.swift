@@ -17,7 +17,7 @@ struct BusinessMap: UIViewRepresentable {
         
         var annotations = [MKPointAnnotation]()
         
-        for business in model.restaurants + model.sights {
+        for business in model.restaurants {
             
             if let lat = business.coordinates?.latitude, let long = business.coordinates?.longitude {
                 
@@ -91,7 +91,7 @@ struct BusinessMap: UIViewRepresentable {
         
         func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
             // User tapped on the annotation view
-            for business in map.model.restaurants + map.model.sights {
+            for business in map.model.restaurants {
                 if business.name == view.annotation?.title {
                     map.selectedBusiness = business
                     return

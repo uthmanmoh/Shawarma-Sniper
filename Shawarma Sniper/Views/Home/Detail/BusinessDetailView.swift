@@ -29,11 +29,10 @@ struct BusinessDetailView: View {
                 ZStack (alignment: .leading) {
                     Rectangle()
                         .frame(height: 36)
-                        .foregroundColor(business.isClosed! ? .gray : .blue)
+                        .foregroundColor(business.isClosed! ? .red : .green)
                     
                     Text(business.isClosed! ? "Closed" : "Open")
-                        .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .padding(.horizontal)
                 }
             }
@@ -52,7 +51,7 @@ struct BusinessDetailView: View {
                 HStack {
                     Text("Phone: ")
                         .bold()
-                    Text(business.displayPhone ?? "")
+                    Text(business.displayPhone ?? "No phone number available")
                     Spacer()
                     Link("Call", destination: URL(string: "tel:\(business.phone ?? "")")!)
                         .accentColor(.blue)
@@ -76,7 +75,7 @@ struct BusinessDetailView: View {
                 HStack {
                     Text("Website: ")
                         .bold()
-                    Text(business.url ?? "")
+                    Text(business.url ?? "No website available")
                     Spacer()
                     Link("Visit", destination: URL(string: "\(business.url ?? "")")!)
                         .accentColor(.blue)
@@ -93,16 +92,17 @@ struct BusinessDetailView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .frame(height: 48)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.green)
                         .padding()
                     Text("Get Directions")
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                 }
             }
             .sheet(isPresented: $showDirections, content: {
                 DirectionsView(business: business)
             })
         }
+
     }
 }
