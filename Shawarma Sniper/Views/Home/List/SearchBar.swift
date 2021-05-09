@@ -55,7 +55,6 @@ struct SearchBar: View {
                     Text("Cancel")
                         .foregroundColor(.blue)
                 }
-                .onDisappear { print("text is \(text)") }
                 .padding(.trailing, 10)
                 .transition(.move(edge: .trailing))
                 .animation(.default)

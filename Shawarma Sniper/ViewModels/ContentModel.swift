@@ -85,7 +85,8 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
         urlComponents?.queryItems = [
             URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
             URLQueryItem(name: "longitude", value: String(location.coordinate.longitude)),
-            URLQueryItem(name: "term", value: "shawarma")
+            URLQueryItem(name: "term", value: "shawarma"),
+            URLQueryItem(name: "limit", value: "50")
         ]
         
         let url = urlComponents?.url

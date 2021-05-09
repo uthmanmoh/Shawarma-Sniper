@@ -51,7 +51,11 @@ struct BusinessDetailView: View {
                 HStack {
                     Text("Phone: ")
                         .bold()
-                    Text(business.displayPhone ?? "No phone number available")
+                    if let phoneNum = business.displayPhone {
+                        Text(phoneNum.isEmpty ? "Unavailable" : phoneNum)
+                    } else {
+                        Text("Unavailable")
+                    }
                     Spacer()
                     Link("Call", destination: URL(string: "tel:\(business.phone ?? "")")!)
                         .accentColor(.blue)
@@ -75,7 +79,7 @@ struct BusinessDetailView: View {
                 HStack {
                     Text("Website: ")
                         .bold()
-                    Text(business.url ?? "No website available")
+                    Text(business.url ?? "Unavailable")
                     Spacer()
                     Link("Visit", destination: URL(string: "\(business.url ?? "")")!)
                         .accentColor(.blue)
