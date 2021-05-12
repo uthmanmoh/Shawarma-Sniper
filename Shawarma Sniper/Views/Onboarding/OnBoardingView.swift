@@ -27,23 +27,24 @@ struct OnBoardingView: View {
                         
                         Spacer()
                         
-                        VStack {
+                        VStack  {
                             Text("Welcome to")
-                                .bold()
-                                .font(.title)
+                                .font(Font.custom("Avenir Heavy", size: 35))
+                                .padding(.bottom, -15)
                             Text("Shawarma Sniper")
-                                .bold()
-                                .font(.largeTitle)
+                                .font(Font.custom("Avenir Heavy", size: 40))
                         }
                         .padding(.horizontal, 15)
                         
                         Text("Shawarma Sniper helps you find the best Shawarma near you!")
-                            .padding(.horizontal, 15)
+                            .font(Font.custom("Avenir", size: 17))
+                            .padding([.horizontal, .bottom], 15)
+                            .padding(.bottom)
                         Spacer()
                     }
                     .tag(0)
                     
-                    VStack (alignment: .center) {
+                    VStack (alignment: .center, spacing: 20) {
                         Spacer()
                         Image("sumaq")
                             .resizable()
@@ -51,16 +52,18 @@ struct OnBoardingView: View {
                             .clipShape(Circle())
                         Spacer()
                         Text("Ready to find the BEST Shawarma?")
-                            .bold()
-                            .font(.title)
+                            .font(Font.custom("Avenir Heavy", size: 30))
                             .padding(.horizontal, 15)
                         Text("We'll show you the greatest Shawarma places near your location!")
-                            .padding(.horizontal, 15)
+                            .font(Font.custom("Avenir", size: 17))
+                            .padding([.horizontal, .bottom], 15)
+                            .padding(.bottom)
                         Spacer()
                     }
                     .tag(1)
                     
                 }
+                .foregroundColor(.black)
                 .multilineTextAlignment(.center)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                 
@@ -76,13 +79,12 @@ struct OnBoardingView: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(height: 48)
-                            .foregroundColor(Color(.label))
-                            .colorInvert()
-                            .shadow(color: Color(.label), radius: 2)
+                            .shadow(color: .black, radius: 5, x: -2, y: 5)
+                            .foregroundColor(Color(.brown))
                         
                         Text(tabSelected == 0 ? "Next" : "Get My Location")
-                            .foregroundColor(Color(.label))
-                            .font(.headline)
+                            .font(Font.custom("Avenir Heavy", size: 18))
+                            .foregroundColor(.black)
                     }
                     .padding()
                 }
@@ -96,6 +98,6 @@ struct OnBoardingView: View {
 
 struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingView()
+        OnBoardingView().colorScheme(.dark)
     }
 }
