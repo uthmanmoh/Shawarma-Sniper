@@ -79,7 +79,7 @@ struct OnBoardingView: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(height: 48)
-                            .shadow(color: .black, radius: 5, x: -2, y: 5)
+                            .shadow(color: tabSelected == 1 ? .black : lightOrange, radius: 5, x: -2, y: 5)
                             .foregroundColor(Color(.brown))
                         
                         Text(tabSelected == 0 ? "Next" : "Get My Location")

@@ -31,7 +31,6 @@ struct HomeView: View {
                             }
                             .accentColor(.blue)
                         }
-                        Divider()
                         
                         SearchBar(text: $filter)
                         
